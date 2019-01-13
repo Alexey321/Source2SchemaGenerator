@@ -1,0 +1,16 @@
+GlobalTypeScope: 00007FFED1D2BC10
+	GetEnumList: 00007FFEBEE1E2D5
+	schemaList->GetNumSchema(): fffffffe
+GlobalTypeScope: 00007FFED920BC10
+	GetEnumList: 00007FFEBEE1E2D5
+	schemaList->GetNumSchema(): fffffffe
+GlobalTypeScope: 00007FFED920BC10
+	GetEnumList: 00007FFEBEE1E2D5
+	schemaList->GetNumSchema(): fffffffe
+	enumInfo.size(): 0
+	schemaList->GetBlockContainers(): 01F8833050FF0000
+GlobalTypeScope: 00007FFED920BC10
+	GetEnumList: 00007FFEC37DE2D5
+	schemaList->GetNumSchema(): fffffffe
+	enumInfo.size(): 0
+	schemaList->GetBlockContainers(): 01F8833050FF0000

@@ -1,0 +1,3 @@
+C:/Users/root/Downloads/Source2Gen-master/CMakeFiles/Source2Gen.dir
+C:/Users/root/Downloads/Source2Gen-master/CMakeFiles/ALL_BUILD.dir
+C:/Users/root/Downloads/Source2Gen-master/CMakeFiles/ZERO_CHECK.dir
