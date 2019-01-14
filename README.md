@@ -1,4 +1,4 @@
-# Source2SchemaGenerator
+# Source2SchemaGenerator (fast prototype)
 
 class tttttttttttttt;
 class N0000080A;
