@@ -235,6 +235,28 @@ class N0000E0F4;
 class N0000E11C;
 class N0000E127;
 class N0000E132;
+class N0000E0F8;
+class N0000E106;
+class N0000E125;
+class N0000E128;
+class N0000E133;
+class N0000E14B;
+class N0000E166;
+class N0000E181;
+class N0000E18C;
+class N0000E197;
+class N0000E1C1;
+class N0000E1D1;
+class N0000E1DF;
+class N0000E1E2;
+class N0000E1E5;
+class N0000E200;
+class N0000E20B;
+class N0000E20F;
+class N0000E232;
+class N0000E23F;
+class N0000E24D;
+class N0000E2E2;
 
 class tttttttttttttt
 {
@@ -310,7 +332,7 @@ public:
 	char pad_0x05E0[0x38]; //0x05E0
 	BlockContainer m_ClassDefinitionArr[256]; //0x0618 
 	char pad_0x2618[0x48]; //0x2618
-	N0000DF8B* m_blockContainers; //0x2660 
+	N0000E0F8* m_blockContainers; //0x2660 
 	char pad_0x2668[0x49B0]; //0x2668
 
 }; //Size=0x7018
@@ -2009,11 +2031,11 @@ class N0000E069
 {
 public:
 	N0000E080* m_pSchemaClassBindingFirst; //0x0000 
-	char* N0000E077; //0x0008 
-	char* m_dllName; //0x0010 
-	char* m_libraryName; //0x0018 
+	char* m_pClassName; //0x0008 
+	char* m_pDllName; //0x0010 
+	char* m_pLibraryName; //0x0018 
 	__int32 m_thisSizeof; //0x0020 
-	__int32 someInt2; //0x0024 
+	__int32 m_maybeFieldsCount; //0x0024 
 	__int32 someInt3; //0x0028 
 	__int32 someInt4; //0x002C 
 	N0000E0A7* m_pFieldsArr; //0x0030 
@@ -2021,11 +2043,31 @@ public:
 	N0000E0BB* m_pSomeArr1; //0x0040 
 	N0000E0CE* m_pSomeMetadataArr; //0x0048 
 	N0000E0E9* m_pTypeScope; //0x0050 
-	N0000E0F4* m_pUnknown; //0x0058 
-	__int64 N0000E095; //0x0060 
-	char pad_0x0068[0x60]; //0x0068
+	N0000E0F4* m_pUnknown1; //0x0058 
+	__int64 m_thisSizeof2; //0x0060 
+	__int64 padding1; //0x0068 
+	N0000E1DF* m_pUnknown6; //0x0070 
+	N0000E1E2* m_pUnknown7; //0x0078 
+	N0000E1E5* m_pUnknown8; //0x0080 
+	N0000E125* m_pUnknown2; //0x0088 
+	char* m_pFieldName1; //0x0090 
+	N0000E128* m_pSchemaClassFieldData; //0x0098 
+	__int64 m_nSingleInheritanceOffset1; //0x00A0 
+	N0000E18C* m_pFieldMetadata1; //0x00A8 
+	char* m_pFieldName1; //0x00B0 
+	N0000E197* m_pSchemaClassFieldData1; //0x00B8 
+	__int64 m_nSingleInheritanceOffset1; //0x00C0 
+	N0000E200* m_pFieldMetadata2; //0x00C8 
+	char* m_pFieldName3; //0x00D0 
+	N0000E20F* m_pSchemaClassFieldData2; //0x00D8 
+	__int64 m_nSingleInheritanceOffset2; //0x00E0 
+	N0000E23F* m_pFieldMetadata3; //0x00E8 
+	char* m_pFieldName4; //0x00F0 
+	N0000E24D* m_pSchemaClassFieldData3; //0x00F8 
+	__int64 m_nSingleInheritanceOffset3; //0x0100 
+	char pad_0x0108[0x400]; //0x0108
 
-}; //Size=0x00C8
+}; //Size=0x0508
 
 class N0000E075
 {
@@ -2118,6 +2160,222 @@ public:
 }; //Size=0x0048
 
 class N0000E132
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E0F8
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
+
+class N0000E106
+{
+public:
+	char pad_0x0000[0x88]; //0x0000
+
+}; //Size=0x0088
+
+class N0000E125
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
+
+class N0000E128
+{
+public:
+	virtual void Function0(); //
+	virtual void Function1(); //
+	virtual void Function2(); //
+	virtual void Function3(); //
+	virtual void Function4(); //
+	virtual void Function5(); //
+	virtual void Function6(); //
+	virtual void Function7(); //
+	virtual void Function8(); //
+	virtual void Function9(); //
+	virtual void Function10(); //
+	virtual void Function11(); //
+	virtual void Function12(); //
+
+	char* m_pFieldTypeName; //0x0008 
+	__int64 unknown1; //0x0010 
+	__int32 m_size; //0x0018 
+	__int32 m_align; //0x001C 
+	N0000E2E2* m_pTypeScope; //0x0020 
+	__int64 m_amount; //0x0028 
+
+}; //Size=0x0030
+
+class N0000E133
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
+
+class N0000E14B
+{
+public:
+	char pad_0x0000[0x20]; //0x0000
+	N0000E166* N0000E150; //0x0020 
+	char pad_0x0028[0x30]; //0x0028
+	N0000E181* N0000E157; //0x0058 
+	char pad_0x0060[0xA8]; //0x0060
+
+}; //Size=0x0108
+
+class N0000E166
+{
+public:
+	char pad_0x0000[0x88]; //0x0000
+
+}; //Size=0x0088
+
+class N0000E181
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E18C
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E197
+{
+public:
+	virtual void Function0(); //
+	virtual void Function1(); //
+	virtual void Function2(); //
+	virtual void Function3(); //
+	virtual void Function4(); //
+	virtual void Function5(); //
+	virtual void Function6(); //
+	virtual void Function7(); //
+	virtual void Function8(); //
+	virtual void Function9(); //
+	virtual void Function10(); //
+	virtual void Function11(); //
+	virtual void Function12(); //
+
+	char* m_pFieldTypeName; //0x0008 
+	__int64 unknown1; //0x0010 
+	__int32 m_size; //0x0018 
+	__int32 m_align; //0x001C 
+	N0000E1D1* m_pTypeScope; //0x0020 
+	__int64 m_amount; //0x0028 
+
+}; //Size=0x0030
+
+class N0000E1C1
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
+
+class N0000E1D1
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E1DF
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E1E2
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E1E5
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E200
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E20B
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
+
+class N0000E20F
+{
+public:
+	virtual void Function0(); //
+	virtual void Function1(); //
+	virtual void Function2(); //
+	virtual void Function3(); //
+	virtual void Function4(); //
+	virtual void Function5(); //
+	virtual void Function6(); //
+	virtual void Function7(); //
+	virtual void Function8(); //
+	virtual void Function9(); //
+	virtual void Function10(); //
+	virtual void Function11(); //
+	virtual void Function12(); //
+
+	char* m_pFieldTypeName; //0x0008 
+	__int64 unknown1; //0x0010 
+	__int32 m_size; //0x0018 
+	__int32 m_align; //0x001C 
+	N0000E232* m_pTypeScope; //0x0020 
+	__int64 m_amount; //0x0028 
+	char pad_0x0030[0x58]; //0x0030
+
+}; //Size=0x0088
+
+class N0000E232
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
+
+class N0000E23F
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
+
+class N0000E24D
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E2E2
 {
 public:
 	char pad_0x0000[0x48]; //0x0000
