@@ -21,7 +21,13 @@ PCSchemaSystem g_pSchemaSystem;
 #define ClassesDefinitionsStartOffset 0x618
 #define EnumsDefinitionsStartOffset 0x2660
 
+#define ClassesDefinitionsArrLen 256
+
 //typedef void* PClassBlockContainer; // defined in ClassBlockContainer.h
 typedef void* PEnumDefinitionBlock;
+
+typedef void* PSchemaType;
+typedef void* PSchemaMetadataSetData;
+
 
 // TODO: reclass SchemaBlock, EnumDefinitionBlock, CSchemaSystemTypeScope

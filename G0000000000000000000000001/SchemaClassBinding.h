@@ -1,5 +1,7 @@
 #pragma once
 
+#include "SchemaClassFieldData.h"
+
 #include <stdint.h>
 
 typedef struct _SchemaClassBinding
@@ -20,5 +22,6 @@ typedef struct _SchemaClassBinding
 	void* m_pUnknown1; // 0058
 	int64_t m_nSomeSizeof; // 0060
 	void* m_pUnknown2; // 0068
-	// TODO
+	// TODO: correct the end of this structure
+	//		 maybe add some fields
 } SchemaClassBinding, *PSchemaClassBinding;
