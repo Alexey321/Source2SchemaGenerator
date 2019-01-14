@@ -1,0 +1,15 @@
+Start generating
+	Trying to aquire CSchemaSystem*
+		Found CSchemaSystem* at addr 00007FFCC94E0260
+	Trying to aquire GlobalTypeScopeFn at addr 00007FFCC948B0C0
+	(vtable addr 00007FFCC94E0260 offset to function 58
+		Found GlobalTypeScopeFn at addr 00007FFCC948B0C0
+	Trying to aquire PCSchemaSystemTypeScope
+		Found PCSchemaSystemTypeScope at addr 00007FFCC94DBC10
+	Trying to aquire ClassDefinitionFirstBlock* (PCSchemaSystemTypeScope* + ClassesDefinitionsStartOffset)
+	00007FFCC94DBC10 + 618 = 00007FFCC94DC228
+		Found ClassDefinitionFirstBlock* at addr 00007FFCC94DC228
+	Trying to aquire EnumDefinitionFirstBlock* (PCSchemaSystemTypeScope* + EnumsDefinitionsStartOffset)
+	00007FFCC94DBC10 + 2660 = 00007FFCC94DE270
+		Found EnumDefinitionFirstBlock* at addr 00007FFCC94DE270
+End generating
