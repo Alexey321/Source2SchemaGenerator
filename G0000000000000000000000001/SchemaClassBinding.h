@@ -1,8 +1,11 @@
 #pragma once
 
-#include "SchemaClassFieldData.h"
+//#include "SchemaClassFieldData.h"
+#include "SchemaStructures.h"
 
 #include <stdint.h>
+
+typedef void* PCSchemaSystemTypeScope; // already defined in SchemaStructures.h   TODO: remove later
 
 typedef struct _SchemaClassBinding
 {

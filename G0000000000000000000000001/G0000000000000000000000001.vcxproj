@@ -152,6 +152,7 @@
     <ClInclude Include="Generate.h" />
     <ClInclude Include="SchemaBlock.h" />
     <ClInclude Include="SchemaClassBinding.h" />
+    <ClInclude Include="SchemaClassFieldData.h" />
     <ClInclude Include="SchemaStructures.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />

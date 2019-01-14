@@ -69,9 +69,46 @@ void Generate()
 					PEnumDefinitionBlock pEnumDefinitionFirstBlock = (void*)((char*)pCSchemaSystemTypeScope + EnumsDefinitionsStartOffset);
 					if (pClassDefinitionFirstBlock)
 					{
-						log << "\t\tFound EnumDefinitionFirstBlock* at addr " << std::hex << pEnumDefinitionFirstBlock << "\n";
+						log << "\t\tFound EnumDefinitionFirstBlock* at addr " << std::hex << pEnumDefinitionFirstBlock << "\n\n";
 
+						// TODO: steal praydog's algorithm
+						/*
+						int ttttt = 0;
+						log << "\tStart generating classes\n";
+						for (int i = 0; i < ClassesDefinitionsArrLen; i++)
+						{
+							PSchemaBlock pSchemaBlock = (pClassDefinitionFirstBlock + sizeof(SchemaBlock) * i)->m_pSchemaBlock;
+							log << "\t\tpSchemaBlock addr " << std::hex << pSchemaBlock << "\n";
+							PSchemaBlock pNextSchemaBlock = NULL;
+							PSchemaClassBinding pClassBinding = NULL;
+							do
+							{
 
+								pClassBinding = pSchemaBlock->m_pClassBinding;
+
+								log << "\t\t\t--pNextSchemaBlock addr " << std::hex << pNextSchemaBlock << "\n";
+								log << "\t\t\t--pClassBinding addr " << std::hex << pClassBinding << "\n";
+
+								log << "\t\t\n----pClassBinding-----\n";
+								log << "\t\t[m_pClassName] " << pClassBinding->m_pClassName << "\n";
+								log << "\t\t[m_pDllName] " << pClassBinding->m_pDllName << "\n";
+								log << "\t\t[m_pLibraryName] " << pClassBinding->m_pLibraryName << "\n";
+								log << "\t\t[m_nSizeof] " << pClassBinding->m_nSizeof << "\n";
+								log << "\t\t[m_nAlignof] " << pClassBinding->m_nAlignof << "\n";
+								log << "\t\t----------------------------\n";
+
+								pNextSchemaBlock = pSchemaBlock->m_pNextBlock;
+
+							} while (pNextSchemaBlock);
+
+							ttttt++;
+							if (ttttt == 10000)
+							{
+								log << "\t\tttttt\n";
+								goto LBL_END_GENERATING;
+							}
+						}
+						*/
 
 					}
 					else
@@ -79,6 +116,7 @@ void Generate()
 						log << "\t\tFailed to aquire EnumDefinitionFirstBlock*\n";
 						goto LBL_END_GENERATING;
 					}
+					
 				}
 				else
 				{
