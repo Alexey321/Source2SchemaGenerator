@@ -1,4 +1,6 @@
-# Source2SchemaGenerator (fast prototype)
+# Source2SchemaGenerator ( prototype )
+
+// Generated using ReClass 2016
 
 class tttttttttttttt;
 class N0000080A;
@@ -236,7 +238,7 @@ class N0000E132;
 class N0000E0F8;
 class N0000E106;
 class N0000E125;
-class N0000E128;
+class SchemaTypeBuiltin;
 class N0000E133;
 class N0000E14B;
 class N0000E166;
@@ -255,6 +257,18 @@ class N0000E232;
 class N0000E23F;
 class N0000E24D;
 class N0000E2E2;
+class N0000E277;
+class SchemaType_s_;
+class N0000E282;
+class N0000E2A5;
+class N0000E214;
+class N0000E221;
+class CSchemaType;
+class SchemaMetadataSetData;
+class N0001C67E;
+class N0001C682;
+class CSchemaType;
+class N0001C6BC;
 
 class tttttttttttttt
 {
@@ -322,7 +336,7 @@ public:
 	virtual ResolveEnumInfoThreadsafe; //
 	virtual ResolveClassInfoThreadsafe; //
 
-	char ScopeName[12]; //0xAB79E9C0 
+	char ScopeName[12]; //0xC867E9C0 
 	char pad_0x0014[0xF4]; //0x0014
 	DWORD64 bIsGlobalScope; //0x0108 
 	char pad_0x0110[0x4C8]; //0x0110
@@ -499,7 +513,7 @@ class CSchemaEnumInfo
 {
 public:
 	char pad_0x0000[0x8]; //0x0000
-	char N00001986[12]; //0xAB79E9C0 
+	char N00001986[12]; //0xC867E9C0 
 	char pad_0x0014[0x434]; //0x0014
 
 }; //Size=0x0448
@@ -1845,7 +1859,7 @@ public:
 class SchemaMetadataEntryData_t
 {
 public:
-	char N0000DDCA[6]; //0xAB79E9C0 
+	char N0000DDCA[6]; //0xC867E9C0 
 	char pad_0x0006[0xC2]; //0x0006
 
 }; //Size=0x00C8
@@ -2032,40 +2046,21 @@ public:
 	char* m_pClassName; //0x0008 
 	char* m_pDllName; //0x0010 
 	char* m_pLibraryName; //0x0018 
-	__int32 m_thisSizeof; //0x0020 
-	__int32 m_maybeFieldsCount; //0x0024 
+	__int32 m_Sizeof; //0x0020 
+	__int32 m_Alignof; //0x0024 
 	__int32 someInt3; //0x0028 
 	__int32 someInt4; //0x002C 
-	N0000E0A7* m_pFieldsArr; //0x0030 
+	N0000E0A7* m_pClassFieldsNamesArr; //0x0030 
 	__int64 padding1; //0x0038 
 	N0000E0BB* m_pSomeArr1; //0x0040 
 	N0000E0CE* m_pSomeMetadataArr; //0x0048 
 	N0000E0E9* m_pTypeScope; //0x0050 
 	N0000E0F4* m_pUnknown1; //0x0058 
-	__int64 m_thisSizeof2; //0x0060 
-	__int64 padding1; //0x0068 
-	N0000E1DF* m_pUnknown6; //0x0070 
-	N0000E1E2* m_pUnknown7; //0x0078 
-	N0000E1E5* m_pUnknown8; //0x0080 
-	N0000E125* m_pUnknown2; //0x0088 
-	char* m_pFieldName1; //0x0090 
-	N0000E128* m_pSchemaClassFieldData; //0x0098 
-	__int64 m_nSingleInheritanceOffset1; //0x00A0 
-	N0000E18C* m_pFieldMetadata1; //0x00A8 
-	char* m_pFieldName1; //0x00B0 
-	N0000E197* m_pSchemaClassFieldData1; //0x00B8 
-	__int64 m_nSingleInheritanceOffset1; //0x00C0 
-	N0000E200* m_pFieldMetadata2; //0x00C8 
-	char* m_pFieldName3; //0x00D0 
-	N0000E20F* m_pSchemaClassFieldData2; //0x00D8 
-	__int64 m_nSingleInheritanceOffset2; //0x00E0 
-	N0000E23F* m_pFieldMetadata3; //0x00E8 
-	char* m_pFieldName4; //0x00F0 
-	N0000E24D* m_pSchemaClassFieldData3; //0x00F8 
-	__int64 m_nSingleInheritanceOffset3; //0x0100 
-	char pad_0x0108[0x400]; //0x0108
+	__int64 m_someSizeof; //0x0060 
+	N0000E221* m_pUnknown2; //0x0068 
+	char pad_0x0070[0x660]; //0x0070
 
-}; //Size=0x0508
+}; //Size=0x06D0
 
 class N0000E075
 {
@@ -2077,7 +2072,9 @@ public:
 class N0000E080
 {
 public:
-	char pad_0x0000[0x48]; //0x0000
+	char pad_0x0000[0x30]; //0x0000
+	N0000E214* N0000E087; //0x0030 
+	char pad_0x0038[0x10]; //0x0038
 
 }; //Size=0x0048
 
@@ -2091,9 +2088,17 @@ public:
 class N0000E0A7
 {
 public:
-	char pad_0x0000[0x48]; //0x0000
+	char* m_Name; //0x0000 
+	CSchemaType* m_pType; //0x0008 
+	__int64 m_nSingleInheritanceOffset; //0x0010 
+	SchemaMetadataSetData* m_Metadata; //0x0018 
+	char* m_Name1; //0x0020 
+	CSchemaType* m_pType1; //0x0028 
+	__int64 m_nSingleInheritanceOffset1; //0x0030 
+	N0001C6BC* m_Metadata1; //0x0038 
+	char pad_0x0040[0xC8]; //0x0040
 
-}; //Size=0x0048
+}; //Size=0x0108
 
 class N0000E0BB
 {
@@ -2105,9 +2110,9 @@ public:
 class N0000E0CE
 {
 public:
-	char pad_0x0000[0xC8]; //0x0000
+	char pad_0x0000[0x108]; //0x0000
 
-}; //Size=0x00C8
+}; //Size=0x0108
 
 class N0000E0E9
 {
@@ -2129,15 +2134,11 @@ public:
 	virtual void Function7(); //
 	virtual void Function8(); //
 	virtual void Function9(); //
-	virtual void Function10(); //
-	virtual void Function11(); //
-	virtual void Function12(); //
-	virtual void Function13(); //
 
 	char* N0000E0F6; //0x0008 
-	char pad_0x0010[0x78]; //0x0010
+	char pad_0x0010[0x178]; //0x0010
 
-}; //Size=0x0088
+}; //Size=0x0188
 
 class N0000E11C
 {
@@ -2185,22 +2186,30 @@ public:
 
 }; //Size=0x0008
 
-class N0000E128
+class SchemaTypeBuiltin
 {
 public:
-	virtual void Function0(); //
-	virtual void Function1(); //
-	virtual void Function2(); //
-	virtual void Function3(); //
-	virtual void Function4(); //
-	virtual void Function5(); //
-	virtual void Function6(); //
-	virtual void Function7(); //
-	virtual void Function8(); //
-	virtual void Function9(); //
-	virtual void Function10(); //
-	virtual void Function11(); //
-	virtual void Function12(); //
+	virtual GetTypeCategory1; //
+	virtual CanAllocate; //
+	virtual Allocate; //
+	virtual AllocateAndCopy; //
+	virtual Copy; //
+	virtual Deallocate; //
+	virtual GetAtomicCategory; //
+	virtual IsValid; //
+	virtual GetSizeOf; //
+	virtual GetAlignOf; //
+	virtual SpewDescription; //
+	virtual operator==; //
+	virtual GetTypeCategory2; //
+	virtual GetInnermostType; //
+	virtual IsA; //
+	virtual InternalMatchInnerAs; //
+	virtual DependsOnlyOnUnresolvedOrGlobalTypes; //
+	virtual Destructor; //
+	virtual void Function18(); //
+	virtual void Function19(); //
+	virtual void Function20(); //
 
 	char* m_pFieldTypeName; //0x0008 
 	__int64 unknown1; //0x0010 
@@ -2379,4 +2388,109 @@ public:
 	char pad_0x0000[0x48]; //0x0000
 
 }; //Size=0x0048
+
+class N0000E277
+{
+public:
+	char* m_pFieldName; //0x0000 
+	SchemaType_s_* m_pSchemaClassFieldData; //0x0008 
+	__int64 m_nSingleInheritanceOffset1; //0x0010 
+	N0000E282* m_pFieldMetadata; //0x0018 
+
+}; //Size=0x0020
+
+class SchemaType_s_
+{
+public:
+	virtual void Function0(); //
+	virtual void Function1(); //
+	virtual void Function2(); //
+	virtual void Function3(); //
+	virtual void Function4(); //
+	virtual void Function5(); //
+	virtual void Function6(); //
+	virtual void Function7(); //
+	virtual void Function8(); //
+	virtual void Function9(); //
+
+	char* m_pFieldTypeName; //0x0008 
+	__int64 unknown1; //0x0010 
+	__int32 m_size; //0x0018 
+	__int32 m_align; //0x001C 
+	N0000E2A5* m_pTypeScope; //0x0020 
+	__int64 m_amount; //0x0028 
+
+}; //Size=0x0030
+
+class N0000E282
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E2A5
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0000E214
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
+
+class N0000E221
+{
+public:
+	char pad_0x0000[0x88]; //0x0000
+
+}; //Size=0x0088
+
+class CSchemaType
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class SchemaMetadataSetData
+{
+public:
+	char* m_Name; //0x0000 
+	N0001C67E* m_pDataType; //0x0008 
+	char pad_0x0010[0xB8]; //0x0010
+
+}; //Size=0x00C8
+
+class N0001C67E
+{
+public:
+	char pad_0x0000[0xC8]; //0x0000
+
+}; //Size=0x00C8
+
+class N0001C682
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class CSchemaType
+{
+public:
+	char pad_0x0000[0x48]; //0x0000
+
+}; //Size=0x0048
+
+class N0001C6BC
+{
+public:
+	char pad_0x0000[0x8]; //0x0000
+
+}; //Size=0x0008
 
