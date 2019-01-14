@@ -1,7 +1,5 @@
 # Source2SchemaGenerator
 
-// Generated using ReClass 2016
-
 class tttttttttttttt;
 class N0000080A;
 class N0000088E;
